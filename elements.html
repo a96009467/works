@@ -6,6 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+<style>
+	.iframe-body-sty{position: relative;overflow: hidden;height:600px;width: 1200px;background-color: red;}
+	.iframe-body-sty>#iframe-shrink{position: absolute;transform:scale(0.55);left: -400px;top: -170px;}
+</style>
+
 	<body class="subpage">
 
 		<!-- Header -->
@@ -28,8 +33,10 @@
 		
 					<header class="align-center">
 						<h1>測試</h1>
-						
-						<iframe src="img.html" width="1920" height="600" frameborder="0" allowfullscreen></iframe>
+						<div class="iframe-body-sty">
+							<iframe id="iframe-shrink" src="img.html" width="1920" height="600" frameborder="0" allowfullscreen>
+							</iframe>
+						</div>
 					</header>		
 	
 		</div>
@@ -47,13 +54,11 @@
 					<a href="">技業資訊股份有限公司 </a> &copy; All Rights Reserved. <br />地址：高雄市三民區澄清路325號 &nbsp; TEL：(07) 389-2365 &nbsp; FAX：(07) 384-0444<br />上海辦事處：上海市長寧區宣化路299弄A棟3D室 &nbsp; TEL: +886-2152388861 &nbsp; 聯絡人：王 煜</a>
 				</div>
 			</footer>
-
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
