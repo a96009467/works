@@ -5,7 +5,7 @@ $(document).ready(function($) {
 });
 
 $.ajax({
-    url: "http://127.0.0.1:8091/getmachinelist", //127.0.0.1:8091
+    url: "http://192.168.2.120:8091/getmachinelist", //127.0.0.1:8091
     type: "GET",								 //方法用GET取回
     //data: {},									 //參數
     cache:false,								 //使用GET才能使用緩存，為了防止ajax使用緩存

@@ -5,7 +5,7 @@ $(document).ready(function($) {
 });
 
 $.ajax({    
-    url: "http://127.0.0.1:8091/getproducts",  //127.0.0.1:8091
+    url: "http://192.168.2.120:8091/getproducts",  //127.0.0.1:8091
     type: "GET",							   //方法用GET取回
     //data: {},								   //參數
     cache:false,							   //使用GET才能使用緩存，為了防止ajax使用緩存
@@ -25,7 +25,7 @@ $.ajax({
              		 + "</td>"
              		 + "<tr><td><S>原價：" 
              		 + parseInt(Data_list[i]["price"])/100 		//price：原價，parseInt()字串轉成整數並除以100顯示正確的價格
-             		 + "元</S>&emsp;&emsp;&emsp;&emsp;&emsp;" 
+             		 + "元</S>&emsp;" 
              		 + "<font color='red'>特價：" 
              		 + parseInt(Data_list[i]["salesPrice"])/100 //salesPrice：特價，parseInt()字串轉成整數並除以100顯示正確的價格
              		 + "元</font>" 
