@@ -104,6 +104,59 @@
 						.addClass('scrolly');
 
 			}
+			
+		// bgcoffee.
+			var $bgcoffee = $('#bgcoffee');
+
+			if ($bgcoffee.length > 0) {
+
+				// IE fix.
+					if (skel.vars.IEVersion < 12) {
+
+						$window.on('resize', function() {
+
+							var wh = $window.height() * 0.60,
+								bc = $bgcoffee.height();
+
+							$bgcoffee.css('height', 'auto');
+
+							window.setTimeout(function() {
+
+								if (bc < wh)
+									$bgcoffee.css('height', wh + 'px');
+
+							}, 0);
+
+						});
+
+						$window.on('load', function() {
+							$window.triggerHandler('resize');
+						});
+
+					}
+
+				// Video check.
+					var video = $bgcoffee.data('video');
+
+					if (video)
+						$window.on('load.bgcoffee', function() {
+
+							// Disable bgcoffee load event (so it doesn't fire again).
+								$window.off('load.bgcoffee');
+
+							// Append video if supported.
+								if (!skel.vars.mobile
+								&&	!skel.breakpoint('large').active
+								&&	skel.vars.IEVersion > 9)
+									$bgcoffee.append('<video autoplay loop><source src="' + video + '.mp4" type="video/mp4" /><source src="' + video + '.webm" type="video/webm" /></video>');
+
+						});
+
+				// More button.
+					$bgcoffee.find('.more')
+						.addClass('scrolly');
+
+			}
 
 		// Tabbed Boxes
 
