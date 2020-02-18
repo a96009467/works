@@ -30,7 +30,10 @@ $.ajax({
              		 + parseInt(Data_list[i]["salesPrice"])/100 //salesPrice：特價，parseInt()字串轉成整數並除以100顯示正確的價格
              		 + "元</font>" 
              		 + "</td></tr>"
-             		 + "<tr><td><input name='購買' id='buy' type='button' value='購買'></input>"	//產生購買按鈕
+             		 + "<tr><td><input name='購買' id='buy"
+			 + i 
+		    	 + "'"
+			 + "type='button' value='購買'></input>"	//產生購買按鈕
              		 + "</td></tr>";
         }
     	var s= "<table width='100%'>";		//產生表單
