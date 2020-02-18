@@ -8,7 +8,7 @@ $.ajax({
     url: "https://192.168.2.120:443/getproducts",  //127.0.0.1:8091
     type: 'POST',								    //方法用POST取回
     data: {},									    //參數
-    cache : true,								    //為了防止ajax使用緩存						   //使用GET才能使用緩存，為了防止ajax使用緩存
+    cache : false,								    //為了防止ajax使用緩存						   //使用GET才能使用緩存，為了防止ajax使用緩存
     dataType: "json",						   //資料類型：json
     success: function(data){				   //成功會執行底下的function
     	var str_Json = JSON.stringify(data);   //將取得物件（Object）字串化
