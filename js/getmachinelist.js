@@ -5,7 +5,7 @@ $(document).ready(function($) {
 });
 
 $.ajax({
-    url: "https://192.168.2.120:443/getmachinelist", //127.0.0.1:8091
+    url: "http://192.168.2.120:8091/getmachinelist", //127.0.0.1:8091
     type: 'POST',								    //方法用POST取回
     data: {},									    //參數
     cache : false,								    //為了防止ajax使用緩存
