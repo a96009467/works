@@ -6,8 +6,8 @@ $(document).ready(function($) {
 
 $.ajax({    
     url: "https://192.168.2.120:443/getproducts",  //127.0.0.1:8091
-    type: 'GET',								    //方法用POST取回
-    //data: {},									    //參數
+    type: 'POST',								    //方法用POST取回
+    data: {content:'{}'},									    //參數
     cache : false,								    //為了防止ajax使用緩存						   //使用GET才能使用緩存，為了防止ajax使用緩存
     dataType: "json",						   //資料類型：json
     success: function(data){				   //成功會執行底下的function
