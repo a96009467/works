@@ -5,10 +5,10 @@ $(document).ready(function($) {
 });
 
 $.ajax({
-    url: "https://192.168.2.120:443/getmachinelist", //127.0.0.1:8091
-    type: 'POST',								    //方法用POST取回
-    data: {},									    //參數
-    cache : false,								    //為了防止ajax使用緩存
+    url: "http://192.168.2.120:8091/getmachinelist", //127.0.0.1:8091
+    type: 'POST',								 //方法用POST取回
+    data: {},									 //參數
+    cache : false,								 //使用GET才能使用緩存，為了防止ajax使用緩存
     dataType: "json",							 //資料類型：json
     success: function(data){					 //成功會執行底下的function
     	var str_Json = JSON.stringify(data);     //將取得物件（Object）字串化
@@ -16,7 +16,7 @@ $.ajax({
     	
     	var Str_temp = "<thead><tr align='center'><td align='center'>"		//設定標題行要顯示的名稱
     				 + "<h1>機器名稱</h1></td><td align='center'><h1>機器碼</h1></td>"
-    				 + "<td align='center'><h1>機器放置的地址</h1></td><td align='center'><h1>目前狀態</h1>" 
+    				 + "<td align='center'><h1>放置地址</h1></td><td align='center'><h1>目前狀態</h1>" 
     				 + "</td></tr></thead>";
     	var Data_list = obj["content"];//取得"content":[{ }]底下的訊息
     	
