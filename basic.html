@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>basic example</title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+<!--<script type="text/javascript" src="../jquery.qrcode.min.js"></script>
+--><script type="text/javascript" src="./src/jquery.qrcode.js"></script>
+<script type="text/javascript" src="./src/qrcode.js"></script>
+
+<p>10</p>
+<div id="qrcodeCanvas"></div>
+<br/>
+<p>20</p>
+<div id="qrcodeCanvas1"></div>
+<br/>
+<p>30</p>
+<div id="qrcodeCanvas2"></div>
+<br/>
+<p>40</p>
+<div id="qrcodeCanvas3"></div>
+<br/>
+<p>50</p>
+<div id="qrcodeCanvas4"></div>
+<script>
+	//jQuery('#qrcode').qrcode("this plugin is great");
+	jQuery('#qrcodeCanvas').qrcode({
+		text	: "10"
+	});	
+		jQuery('#qrcodeCanvas1').qrcode({
+		text	: "20"
+	});	
+		jQuery('#qrcodeCanvas2').qrcode({
+		text	: "30"
+	});	
+		jQuery('#qrcodeCanvas3').qrcode({
+		text	: "40"
+	});	
+		jQuery('#qrcodeCanvas4').qrcode({
+		text	: "50"
+	});	
+</script>
+
+</body>
+</html>
