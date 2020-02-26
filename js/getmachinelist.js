@@ -6,7 +6,7 @@ $(document).ready(function($) {
 
 $.ajax({
     url: "http://192.168.2.120:8091/getmachinelist", //127.0.0.1:8091
-    type: 'POST',								 //方法用POST取回
+    type: 'GET',								 //方法用POST取回
     data: {},									 //參數
     cache : false,								 //使用GET才能使用緩存，為了防止ajax使用緩存
     dataType: "json",							 //資料類型：json
